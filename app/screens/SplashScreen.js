@@ -1,11 +1,19 @@
-import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import React, { useEffect } from "react";
 import { SafeAreaView, StyleSheet, View, Image } from "react-native";
 
 function SplashScreen() {
+  const navigation = useNavigation();
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate("home");
+    }, 3000);
+  });
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Image source={require("../assets/favicon.png")} />
+        <Image source={require("../assets/ic_logo.png")} />
       </View>
     </SafeAreaView>
   );
