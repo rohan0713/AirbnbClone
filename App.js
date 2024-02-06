@@ -13,6 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { colors } from "./app/assets/colors/color";
+import ListingItem from "./app/screens/ListingItem";
 
 const Tab = createBottomTabNavigator();
 
@@ -52,7 +53,7 @@ export default function App() {
             tabBarIcon: ({ focused, color, size }) => (
               <FontAwesome
                 name="search"
-                size={focused ? 16 : 14}
+                size={focused ? 18 : 14}
                 color={focused ? colors.activeTint : colors.inactiveTint}
               />
             ),
@@ -65,7 +66,7 @@ export default function App() {
             tabBarIcon: ({ focused }) => (
               <Feather
                 name="heart"
-                size={focused ? 16 : 14}
+                size={focused ? 18 : 14}
                 color={focused ? colors.activeTint : colors.inactiveTint}
               />
             ),
@@ -78,7 +79,7 @@ export default function App() {
             tabBarIcon: ({ focused }) => (
               <FontAwesome5
                 name="airbnb"
-                size={focused ? 16 : 14}
+                size={focused ? 18 : 14}
                 color={focused ? colors.activeTint : colors.inactiveTint}
               />
             ),
@@ -91,7 +92,7 @@ export default function App() {
             tabBarIcon: ({ focused }) => (
               <Ionicons
                 name="chatbox-outline"
-                size={focused ? 16 : 14}
+                size={focused ? 18 : 14}
                 color={focused ? colors.activeTint : colors.inactiveTint}
               />
             ),
@@ -104,7 +105,7 @@ export default function App() {
             tabBarIcon: ({ focused }) => (
               <Octicons
                 name="person"
-                size={focused ? 16 : 14}
+                size={focused ? 18 : 14}
                 color={focused ? colors.activeTint : colors.inactiveTint}
               />
             ),

@@ -9,6 +9,8 @@ import {
   TouchableWithoutFeedback,
   FlatList,
 } from "react-native";
+import ListingItem from "./ListingItem";
+import { colors } from "../assets/colors/color";
 
 const items = [
   { id: "1", name: "Amazing view", icon: "../assets/static/ic_views.png" },
@@ -55,12 +57,7 @@ function HomeScreen() {
           <Image source={require("../assets/static/ic_filter.png")} />
         </View>
       </View>
-      <FlatList
-        style={styles.list}
-        data={items}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      />
+      <ListingItem />
     </SafeAreaView>
   );
 }
@@ -73,6 +70,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor: colors.light,
   },
 
   filterIcon: {
@@ -80,7 +78,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderColor: "black",
     borderWidth: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.light,
     alignItems: "center",
     padding: 10,
   },
@@ -91,7 +89,7 @@ const styles = StyleSheet.create({
     marginEnd: 20,
     height: 60,
     elevation: 8,
-    backgroundColor: "white",
+    backgroundColor: colors.light,
     borderRadius: 30,
     flexDirection: "row",
     alignItems: "center",

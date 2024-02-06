@@ -6,4 +6,5 @@ export const colors = {
   text: "black",
   activeTint: "#FF5A5F",
   inactiveTint: "#767676",
+  light: "#FFFDFA",
 };
