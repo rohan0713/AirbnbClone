@@ -13,7 +13,7 @@ function SplashScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Image source={require("../assets/ic_logo.png")} />
+        <Image source={require("../assets/static/ic_logo.png")} />
       </View>
     </SafeAreaView>
   );
