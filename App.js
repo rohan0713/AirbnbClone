@@ -14,6 +14,7 @@ import { Octicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { colors } from "./app/assets/colors/color";
 import ListingItem from "./app/screens/ListingItem";
+import DescriptionScreen from "./app/screens/DescriptionScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,97 +22,16 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    // <NavigationContainer>
-    //   <Stack.Navigator
-    //     initialRouteName="homPage"
-    //     screenOptions={{ headerShown: false }}
-    //   >
-    //     <Stack.Screen name="home" component={HomeScreen} />
-    //     <Stack.Screen name="splash" component={SplashScreen} />
-    //     <Stack.Screen name="profile" component={ProfileScreen} />
-    //     <Stack.Screen name="homPage" component={Home} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-
     <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          headerShown: false,
-          tabBarActiveTintColor: colors.activeTint,
-          tabBarInactiveTintColor: colors.inactiveTint,
-          tabBarLabelStyle: {
-            fontSize: 11,
-            paddingBottom: 5,
-          },
-          tabBarStyle: { paddingVertical: 5 },
-        }}
+      <Stack.Navigator
+        initialRouteName="splash"
+        screenOptions={{ headerShown: false }}
       >
-        <Tab.Screen
-          name="Explore"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ focused, color, size }) => (
-              <FontAwesome
-                name="search"
-                size={focused ? 18 : 14}
-                color={focused ? colors.activeTint : colors.inactiveTint}
-              />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Wishlists"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <Feather
-                name="heart"
-                size={focused ? 18 : 14}
-                color={focused ? colors.activeTint : colors.inactiveTint}
-              />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Trips"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <FontAwesome5
-                name="airbnb"
-                size={focused ? 18 : 14}
-                color={focused ? colors.activeTint : colors.inactiveTint}
-              />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Inbox"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <Ionicons
-                name="chatbox-outline"
-                size={focused ? 18 : 14}
-                color={focused ? colors.activeTint : colors.inactiveTint}
-              />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Profile"
-          component={ProfileScreen}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <Octicons
-                name="person"
-                size={focused ? 18 : 14}
-                color={focused ? colors.activeTint : colors.inactiveTint}
-              />
-            ),
-          }}
-        />
-      </Tab.Navigator>
+        <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="splash" component={SplashScreen} />
+        <Stack.Screen name="profile" component={ProfileScreen} />
+        <Stack.Screen name="desc" component={DescriptionScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
