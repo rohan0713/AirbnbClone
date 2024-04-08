@@ -10,6 +10,7 @@ import { Octicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { colors } from "../assets/colors/color";
 import InboxScreen from "./InboxScreen";
+import TripScreen from "./TripScreen";
 
 const Tab = createBottomTabNavigator();
 function Home() {
@@ -54,7 +55,7 @@ function Home() {
       />
       <Tab.Screen
         name="Trips"
-        component={DescriptionScreen}
+        component={TripScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesome5

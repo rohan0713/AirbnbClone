@@ -30,7 +30,7 @@ function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.searchContainer}>
+        <TouchableOpacity style={styles.searchContainer} activeOpacity={0.8}>
           <Image
             margin={20}
             source={require("../assets/static/ic_search.png")}
