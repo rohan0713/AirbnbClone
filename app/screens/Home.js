@@ -9,6 +9,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { colors } from "../assets/colors/color";
+import InboxScreen from "./InboxScreen";
 
 const Tab = createBottomTabNavigator();
 function Home() {
@@ -66,7 +67,7 @@ function Home() {
       />
       <Tab.Screen
         name="Inbox"
-        component={HomeScreen}
+        component={InboxScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Ionicons
